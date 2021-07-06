@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lerna": "lerna publish"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +18,14 @@
     "@storybook/addon-links": "^6.3.2",
     "@storybook/vue": "^6.3.2",
     "babel-loader": "^8.2.2",
-    "lerna": "^4.0.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
     "vue": "^2.6.14"
-  }
+  },
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ]
 }
